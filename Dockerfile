@@ -1,10 +1,10 @@
 FROM openjdk:11 as build
 WORKDIR /workspace/v1/discovery-server
 
-COPY /discovery-server/mvnw .
-COPY /discovery-server/.mvn .mvn
-COPY /discovery-server/pom.xml .
-COPY /discovery-server/src src
+COPY /mvnw .
+COPY /.mvn .mvn
+COPY /pom.xml .
+COPY /src src
 
 RUN chmod +x ./mvnw
 RUN ./mvnw install -DskipTests
